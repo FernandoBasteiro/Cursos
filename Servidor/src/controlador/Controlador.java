@@ -187,4 +187,8 @@ public class Controlador {
 		p.eliminarMateria(m);
 		p.grabar();
 	}
+	
+	public AlumnoDTO buscarAlumnoDTO(int legajo) throws DatabaseException {
+		return AlumnoDAO.getInstancia().toNegocio(AlumnoDAO.getInstancia().getAlumnoByLegajo(legajo)).toView();
+	}
 }
