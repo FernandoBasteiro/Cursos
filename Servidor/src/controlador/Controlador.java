@@ -191,4 +191,8 @@ public class Controlador {
 	public AlumnoDTO buscarAlumnoDTO(int legajo) throws DatabaseException {
 		return AlumnoDAO.getInstancia().toNegocio(AlumnoDAO.getInstancia().getAlumnoByLegajo(legajo)).toView();
 	}
+	public ProfesorDTO buscarProfesorDTO(int legajo) throws DatabaseException {		
+		return ProfesorDAO.getInstancia().toNegocio(ProfesorDAO.getInstancia().getProfesorByLegajo(legajo)).toView();
+	}
+
 }
